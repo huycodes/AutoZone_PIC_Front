@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import ResponsiveAppBar from './components/AppBarComponent'; 
 import DisabledTabs from './components/TabComponent';
+import SimpleContainer from './components/ReportContainerComponent';
+import FloatingActionButtons from './components/ExportButtonComponent';
 //Import Font
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -16,6 +18,8 @@ function App() {
       
     <ResponsiveAppBar sx={{ bgcolor: "green" }}/>
     <DisabledTabs/>
+    <SimpleContainer/>
+    <FloatingActionButtons/>
     </div>
   );
 }
