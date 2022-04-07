@@ -11,9 +11,10 @@ export default function DisabledTabs() {
 
   return (
     <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example" centered>
-      <Tab label="Report 1" />
-      <Tab label="Report 2" disabled />
-      <Tab label="Report 3" />
+      <Tab label="Last 3 days" />
+      <Tab label="Last week" />
+      <Tab label="Last 2 weeks" />
+      <Tab label="Last month" />
     </Tabs>
   );
 }

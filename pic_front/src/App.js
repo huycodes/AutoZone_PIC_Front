@@ -3,8 +3,9 @@ import './App.css';
 import ResponsiveAppBar from './components/AppBarComponent'; 
 import DisabledTabs from './components/TabComponent';
 import SimpleContainer from './components/ReportContainerComponent';
-import FloatingActionButtons from './components/ExportButtonComponent';
-
+import ExportButtonComponent from './components/ExportButtonComponent';
+import ChartComponent from './components/ChartComponent';
+import React from 'react';
 //Import Font
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -20,9 +21,17 @@ function App() {
     <ResponsiveAppBar sx={{ bgcolor: "green" }}/>
     <DisabledTabs/>
     <SimpleContainer/>
+    <ExportButtonComponent/>
+    <p></p>
+    <div class="flexbox-container" flex-direction="row">
+      <div><ChartComponent/></div>
+      <div><ChartComponent/></div>
+    </div>
+    
+    
 
     
-    <FloatingActionButtons/>
+   
     
     </div>
   );
