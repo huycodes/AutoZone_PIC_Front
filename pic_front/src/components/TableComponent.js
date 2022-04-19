@@ -9,26 +9,13 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 
 const columns = [
-  { id: 'date', label: 'Date'},
-  { id: 'appsloaded', label: 'Applications Loaded'},
-  { id: 'appcount', label: 'Total Applications' },
-  {
-    id: 'notesloaded',
-    label: 'Notes Loaded',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'notecount',
-    label: 'Total notes',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'piesloaded',
-    label: 'Loaded',
-    format: (value) => value.toFixed(2),
-  },
-  {
-    id: 'piescount',
+  { id: 'date', label: 'Date',format: (value) => value.toFixed(2),},
+  { id: 'appsloaded', label: 'Applications Loaded',format: (value) => value.toFixed(2),},
+  { id: 'appcount', label: 'Total Applications',format: (value) => value.toFixed(2), },
+  { id: 'notesloaded', label: 'Notes Loaded',format: (value) => value.toFixed(2),},
+  { id: 'notecount', label: 'Total notes',format: (value) => value.toFixed(2),},
+  { id: 'piesloaded', label: 'Loaded',format: (value) => value.toFixed(2),},
+  { id: 'piescount',
     label: 'Total Count',
     format: (value) => value.toFixed(2),
   }
@@ -40,7 +27,7 @@ function createData(name, code, population, size) {
 }
 
 const rows = [
-  createData('A', 'B', 1324171354, 3287263),
+  createData(1,2,3,4,5,6,7),
   createData('C', 'D', 1403500365, 9596961),
 
 ];
@@ -68,10 +55,10 @@ export default function ColumnGroupingTable() {
                 
               </TableCell>
               <TableCell align="center" colSpan={4}>
-                ACES
+                Catalog
               </TableCell>
               <TableCell align="center" colSpan={2}>
-                PIES
+                Products
               </TableCell>
             </TableRow>
             <TableRow>
