@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import ResponsiveAppBar from './components/AppBarComponent'; 
-import DisabledTabs from './components/TabComponent';
-import SimpleContainer from './components/ReportContainerComponent';
+import TabGroup from './components/TabGroup';
+import TableContainer from './components/TableContainer';
 import ExportButtonComponent from './components/ExportButtonComponent';
 import ChartComponent from './components/ChartComponent';
 import React from 'react';
@@ -11,24 +11,25 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import ProductComponent from './components/ProductComponent';
+
+import LoadedAppsOn from './components/LoadedAppsOn';
+import LoadedNotesOn from './components/LoadedNotesOn';
+import LoadedProductsOn from './components/LoadedProductsOn';
 
 function App() {
 
   return (
     <div className="App">
-    
-    <ProductComponent/>
       
     <ResponsiveAppBar sx={{ bgcolor: "green" }}/>
-    <DisabledTabs/>
-    <SimpleContainer/>
-    <ExportButtonComponent/>
+    <TabGroup/>
+    <TableContainer/>
+
     <p></p>
-    <div class="flexbox-container" flex-direction="row">
+    {/* <div class="flexbox-container" flex-direction="row">
       <div><ChartComponent/></div>
       <div><ChartComponent/></div>
-    </div>
+    </div> */}
     
     
 

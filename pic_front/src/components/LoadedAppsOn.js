@@ -1,8 +1,9 @@
+import { Today } from '@material-ui/icons';
 import React, {Component} from 'react';
+import CatalogService from '../Services/CatalogService';
 
-import ProductService from '../Services/ProductService';
 
-class ProductComponent extends React.Component{
+class LoadedAppsOn extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -11,7 +12,7 @@ class ProductComponent extends React.Component{
     }
 
     componentDidMount(){
-        ProductService.getLoadedAfter(213).then((response)=>{
+        CatalogService.getLoadedAppsOn(153).then((response)=>{
             this.setState({loaded: response.data})
         })
 
@@ -20,6 +21,7 @@ class ProductComponent extends React.Component{
     render(){
             return (
                 <div>
+                    {/* {Date().substring(0,16)} */}
                     {this.state.loaded}
                 </div>
             )
@@ -30,4 +32,4 @@ class ProductComponent extends React.Component{
 
 }
 
-export default ProductComponent;
+export default LoadedAppsOn;
