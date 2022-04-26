@@ -23,7 +23,7 @@ function App() {
       
     <ResponsiveAppBar/>
     
-    <div><h1><font color="blue">Weekly Overview</font></h1></div>
+    <div><h1><font color="black">Weekly Overview</font></h1></div>
     
     {/* <div><ChartComponent type='pies'/></div>
     <div><ChartComponent type='aces'/></div> */}
