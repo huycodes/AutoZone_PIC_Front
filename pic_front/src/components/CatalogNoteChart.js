@@ -15,10 +15,10 @@ export default class CatalogNoteChart extends React.Component{
 
 
         var tempRows = []
-        var prod = 0;
+        var notes = 0;
         for (var i = 80; i < 87; ++i){
-        await ProductService.getLoadedOn(i).then((response) => {
-            prod = response.data
+        await CatalogService.getLoadedNotesOn(i).then((response) => {
+            notes = response.data
         })
 
         var curDate = new Date();
@@ -26,7 +26,7 @@ export default class CatalogNoteChart extends React.Component{
 
         tempRows.push({date: curDate,
                         y: 10,
-                        x: prod});
+                        x: notes});
     };
 
 
@@ -43,7 +43,7 @@ export default class CatalogNoteChart extends React.Component{
     render(){
         return (
             <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <BarChart width={520} height={300} data={this.state.data} >
+            <BarChart width={420} height={300} data={this.state.data} >
                 
                 <CartesianGrid />
                 <XAxis dataKey="date" />
