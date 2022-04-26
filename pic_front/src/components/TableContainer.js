@@ -6,6 +6,7 @@ import TableComponent from './TableComponent';
 
 export default function TableContainer() {
   return (
+    <div>
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="100vh" centered>
@@ -15,5 +16,6 @@ export default function TableContainer() {
         
       </Container>
     </React.Fragment>
+    </div>
   );
 }

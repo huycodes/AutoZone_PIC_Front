@@ -13,7 +13,7 @@ import CatalogService from '../Services/CatalogService';
 
 export default class TableComponent extends React.Component{
   
-  state = { rows: [], prod: 0, notes: 0, apps: 0, cumProd: 0, cumNotes: 0, cumApps: 0}
+  state = { rows: [], days: 0, prod: 0, notes: 0, apps: 0, cumProd: 0, cumNotes: 0, cumApps: 0}
   
   async getData(){
 
@@ -37,22 +37,19 @@ export default class TableComponent extends React.Component{
     for (var i = 0; i < 7; ++i){
       await ProductService.getLoadedOn(i).then((response) => {
         this.setState({prod: response.data})
-        // this.state.prod = response.data
       })
       await CatalogService.getLoadedNotesOn(i).then((response) => {
         this.setState({notes: response.data})
-        // this.state.notes = response.data
       })
       await CatalogService.getLoadedAppsOn(i).then((response) => {
         this.setState({apps: response.data})
-        // this.state.apps = response.data
       })
 
       var curDate = new Date();
       curDate = new Date(curDate.setDate(curDate.getDate()-i));
 
       tempRows.push({date: curDate.toDateString(),
-                     totalProds: 80,
+                     totalProds: 0,
                      loadedProds: this.state.prod,
                      totalNotes: 80,
                      loadedNotes: this.state.notes,
@@ -60,14 +57,16 @@ export default class TableComponent extends React.Component{
                      loadedApps: this.state.apps});
   };
 
-    console.log(this.state)
+
     this.setState({rows: tempRows})
-    console.log(this.state)
+    
   }
 
   componentDidMount(){
     this.getData()
   }
+
+  
 
   render(){
     // forceUpdate()
@@ -90,20 +89,33 @@ export default class TableComponent extends React.Component{
           </TableHead>
           <TableBody>
             {this.state.rows.map((row) => (
+     
+
               <TableRow
                 key={row.date}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.date}
+                  <h2>{row.date}</h2>
                 </TableCell>
-              
-                <TableCell align="left">{row.totalProds}</TableCell>
-                <TableCell align="left">{row.loadedProds}</TableCell>
-                <TableCell align="left">{row.totalNotes}</TableCell>
-                <TableCell align="left">{row.loadedNotes}</TableCell>
-                <TableCell align="left">{row.totalApps}</TableCell>
-                <TableCell align="left">{row.loadedApps}</TableCell>
+                {row.totalProds == row.loadedProds ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalProds}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalProds}</div></TableCell>}
+                {row.totalProds == row.loadedProds ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedProds}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedProds}</div></TableCell>}
+                {row.totalNotes == row.loadedNotes ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalNotes}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalNotes}</div></TableCell>}
+                {row.totalNotes == row.loadedNotes ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedNotes}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedNotes}</div></TableCell>}
+                {row.totalApps == row.loadedApps ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalApps}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalApps}</div></TableCell>}
+                {row.totalApps == row.loadedApps ?
+                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedApps}</h3></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedApps}</div></TableCell>}
               </TableRow>
             ))}
           </TableBody>
