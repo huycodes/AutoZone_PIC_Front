@@ -2,7 +2,9 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
-import ChartComponent from './ChartComponent';
+import ProductChart from './ProductChart';
+import CatalogNoteChart from './CatalogNoteChart';
+import CatalogApplicationChart from './CatalogApplicationChart';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -12,13 +14,14 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function ChartStack() {
+export default function ChartStack(props) {
   return (
     <div>
       <Stack direction="row" spacing={2} centered>
-        <div><ChartComponent/></div>
-        <div><ChartComponent/></div>
-        <div><ChartComponent/></div>
+       
+        <div><ProductChart/><h3><font color="blue">Products</font></h3></div>
+        <div><CatalogNoteChart/><h3><font color="blue">Catalog Notes</font></h3></div>
+        <div><CatalogApplicationChart/><h3><font color="blue">Catalog Applications</font></h3></div>
       </Stack>
 
     </div>

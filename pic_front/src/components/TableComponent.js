@@ -8,11 +8,15 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ProductService from '../Services/ProductService';
 import CatalogService from '../Services/CatalogService';
+import ChartStack from './ChartStack';
+
 
 
 
 export default class TableComponent extends React.Component{
   
+
+
   state = { rows: [], days: 0, prod: 0, notes: 0, apps: 0, cumProd: 0, cumNotes: 0, cumApps: 0}
   
   async getData(){
@@ -33,8 +37,8 @@ export default class TableComponent extends React.Component{
       // this.state.apps = response.data
     })
 
-    tempRows.push({date: '__Cumulative__', totalProds:50, loadedProds: this.state.cumProd, totalNotes: 50, loadedNotes: this.state.cumNotes, totalApps: 50, loadedApps: this.state.cumApps})
-    for (var i = 0; i < 7; ++i){
+    tempRows.push({date: '__CUMULATIVE__', totalProds:0, loadedProds: this.state.cumProd, totalNotes: 0, loadedNotes: this.state.cumNotes, totalApps: 0, loadedApps: this.state.cumApps})
+    for (var i = 80; i < 87; ++i){
       await ProductService.getLoadedOn(i).then((response) => {
         this.setState({prod: response.data})
       })
@@ -51,14 +55,15 @@ export default class TableComponent extends React.Component{
       tempRows.push({date: curDate.toDateString(),
                      totalProds: 0,
                      loadedProds: this.state.prod,
-                     totalNotes: 80,
+                     totalNotes: 0,
                      loadedNotes: this.state.notes,
-                     totalApps: 80,
+                     totalApps: 0,
                      loadedApps: this.state.apps});
   };
 
 
     this.setState({rows: tempRows})
+   
     
   }
 
@@ -78,13 +83,13 @@ export default class TableComponent extends React.Component{
           <TableHead>
             <TableRow>
             
-              <TableCell align="left">Date</TableCell>
-              <TableCell align="left">Total Products</TableCell>
-              <TableCell align="left">Loaded Products</TableCell>
-              <TableCell align="left">Total Notes</TableCell>
-              <TableCell align="left">Loaded Notes</TableCell>
-              <TableCell align="left">Total Applications</TableCell>
-              <TableCell align="left">Loaded Application</TableCell>
+              <TableCell align="left"><h3>Date</h3></TableCell>
+              <TableCell align="left"><h3>Total Products</h3></TableCell>
+              <TableCell align="left"><h3>Loaded Products</h3></TableCell>
+              <TableCell align="left"><h3>Total Notes</h3></TableCell>
+              <TableCell align="left"><h3>Loaded Notes</h3></TableCell>
+              <TableCell align="left"><h3>Total Applications</h3></TableCell>
+              <TableCell align="left"><h3>Loaded Application</h3></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -96,7 +101,7 @@ export default class TableComponent extends React.Component{
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  <h2>{row.date}</h2>
+                  <h3>{row.date}</h3>
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
                 <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalProds}</h3></div></TableCell>
