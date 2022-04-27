@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ChartStack(props) {
   return (
     <div>
-      <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
+      <Stack direction="row" spacing={2.6} alignItems="center" justifyContent="center">
     
         <Item><div><ProductChart/><h3><font color="3874CB">Products</font></h3></div></Item>
         <Item><div><CatalogNoteChart/><h3><font color="3874CB">Catalog Notes</font></h3></div></Item>

@@ -2,11 +2,11 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-export default function ExportButtonComponent() {
+export default function ButtonComponent(props) {
   return (
     <Stack spacing={2} direction="row">
 
-      <Button variant="contained" size="medium">Export</Button>
+      <Button variant="contained" size="medium">{props.name}</Button>
     </Stack>
   );
 }
