@@ -12,54 +12,55 @@ import CatalogService from '../Services/CatalogService';
 
 export default class TableComponent extends React.Component{
   
-  state = { rows: [], days: 0, prod: 0, notes: 0, apps: 0, cumProd: 0, cumNotes: 0, cumApps: 0}
+  state = { data: []}
   
   async getData(){
 
 
-    var tempRows = []
+    var tempData = []
+    var numProd = 0
+    var numNotes = 0
+    var numApps = 0
     
     await ProductService.getLoadedAfter(7).then((response) => {
-      this.setState({cumProd: response.data})
+      numProd = response.data
       // this.state.prod = response.data
     })
     await CatalogService.getLoadedNotesAfter(7).then((response) => {
-      this.setState({cumNotes: response.data})
+      numNotes = response.data
       // this.state.notes = response.data
     })
     await CatalogService.getLoadedAppsAfter(7).then((response) => {
-      this.setState({cumApps: response.data})
+      numApps = response.data
       // this.state.apps = response.data
     })
 
-    tempRows.push({date: '__CUMULATIVE__', totalProds:0, loadedProds: this.state.cumProd, totalNotes: 0, loadedNotes: this.state.cumNotes, totalApps: 0, loadedApps: this.state.cumApps})
+    tempData.push({date: 'CUMULATIVE', totalProds:0, loadedProds: numProd, totalNotes: 0, loadedNotes: numNotes, totalApps: 0, loadedApps: numApps})
     for (var i = 80; i < 87; ++i){
       await ProductService.getLoadedOn(i).then((response) => {
-        this.setState({prod: response.data})
+        numProd = response.data
       })
       await CatalogService.getLoadedNotesOn(i).then((response) => {
-        this.setState({notes: response.data})
+        numNotes = response.data
       })
       await CatalogService.getLoadedAppsOn(i).then((response) => {
-        this.setState({apps: response.data})
+        numApps = response.data
       })
 
       var curDate = new Date();
       curDate = new Date(curDate.setDate(curDate.getDate()-i));
 
-      tempRows.push({date: curDate.toDateString(),
+      tempData.push({date: curDate.toDateString(),
                      totalProds: 0,
-                     loadedProds: this.state.prod,
+                     loadedProds: numProd,
                      totalNotes: 0,
-                     loadedNotes: this.state.notes,
+                     loadedNotes: numNotes,
                      totalApps: 0,
-                     loadedApps: this.state.apps});
+                     loadedApps: numApps});
   };
 
-
-    this.setState({rows: tempRows})
-   
-    
+    this.setState({data: tempData})
+       
   }
 
   componentDidMount(){
@@ -87,7 +88,7 @@ export default class TableComponent extends React.Component{
             </TableRow>
           </TableHead>
           <TableBody>
-            {this.state.rows.map((row) => (
+            {this.state.data.map((row) => (
      
 
               <TableRow

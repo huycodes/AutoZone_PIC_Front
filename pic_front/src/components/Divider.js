@@ -33,6 +33,7 @@ export default function CustomDivider() {
       </Divider>
       {content} */}
       <p></p>
+      <p></p>
     </Root>
   );
 }
