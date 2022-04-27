@@ -37,7 +37,7 @@ export default class CatalogApplicationChart extends React.Component{
                 <XAxis dataKey="date" />
                 <YAxis />
                 <Bar dataKey="Loaded" stackId="0"  fill="#3874CB" />
-                <Bar dataKey="Total" stackId="1" fill="#A7C7E7"  fillOpacity={0.5}/>
+                <Bar dataKey="Total" stackId="1" fill="#A7C7E7"  fillOpacity={0.6}/>
             </BarChart>
             </div>
         );

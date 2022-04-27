@@ -76,13 +76,13 @@ export default class TableComponent extends React.Component{
           <TableHead>
             <TableRow>
             
-              <TableCell align="left" color="red"><h3>Date</h3></TableCell>
-              <TableCell align="left"><h3>Total Products</h3></TableCell>
-              <TableCell align="left"><h3>Loaded Products</h3></TableCell>
-              <TableCell align="left"><h3>Total Notes</h3></TableCell>
-              <TableCell align="left"><h3>Loaded Notes</h3></TableCell>
-              <TableCell align="left"><h3>Total Applications</h3></TableCell>
-              <TableCell align="left"><h3>Loaded Applications</h3></TableCell>
+              <TableCell align="left" ><h3 style={{color:'#3874CB'}}>Date</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Products</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Products</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Notes</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Notes</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Applications</h3></TableCell>
+              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Applications</h3></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -94,7 +94,7 @@ export default class TableComponent extends React.Component{
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  <h3>{row.date}</h3>
+                  <h3 style={{color:'#3874CB'}}>{row.date}</h3>
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
                 <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalProds}</h2></div></TableCell>
