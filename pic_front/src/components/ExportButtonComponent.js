@@ -6,7 +6,7 @@ export default function ExportButtonComponent() {
   return (
     <Stack spacing={2} direction="row">
 
-      <Button variant="outlined" centered>Export</Button>
+      <Button variant="contained" size="medium">Export</Button>
     </Stack>
   );
 }

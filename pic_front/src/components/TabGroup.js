@@ -2,7 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
-
+import ExportButtonComponent from './ExportButtonComponent';
 export default function TabGroup() {
   return (
     <Box
@@ -19,6 +19,8 @@ export default function TabGroup() {
         <Button>Last week</Button>
         <Button>Last 2 weeks</Button>
         <Button>Last month</Button>
+        
+        <ExportButtonComponent/>
       </ButtonGroup>
 
     </Box>

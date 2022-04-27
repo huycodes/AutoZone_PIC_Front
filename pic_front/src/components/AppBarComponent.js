@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Main', 'PIES', 'ACES'];
+const pages = ['Main', 'Query', 'Report'];
 const settings = ['Profile', 'Account', 'Settings', 'Logout'];
 
 const ResponsiveAppBar = () => {
