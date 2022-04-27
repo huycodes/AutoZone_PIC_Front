@@ -18,9 +18,9 @@ export default function OverviewGroup() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth='xxl'>
-        <Box sx={{ marginTop:5, bgcolor: '#3487df', height: 460, Opacity:1, border:0, borderColor:'#3874CB', borderRadius:3 }}>
-        <div><h2><font color="white">Weekly Overview</font></h2></div>
-        <p><div><ChartStack/></div></p>
+        <Box sx={{ marginTop:5, bgcolor: '#3487df', height: 425, Opacity:1, border:0, borderColor:'#3874CB', borderRadius:3 }}>
+        <div><h3><font color="white">Weekly Overview</font></h3></div>
+        <div><ChartStack/></div>
     {/* 3874CB 
     3487df*/}
         </Box>

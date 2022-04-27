@@ -76,9 +76,9 @@ export default class TableComponent extends React.Component{
         <Table sx={{ minWidth: 150 }} aria-label="simple table" stickyHeader size='small'>
           <TableHead>
             <TableRow 
-                sx={{ '&:first-child th': { color:'#3874CB', border: 0 } }}>
+                sx={{ }}>
             
-              <TableCell align="left" ><h3 style={{color:'#3874CB'}}>Date</h3></TableCell>
+              <TableCell align="left" ><h3 style={{color:'#3874CB'}}></h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#3874CB'}}>Total Products</h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#3874CB'}}>Loaded Products</h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#3874CB'}}>Total Notes</h3></TableCell>
@@ -93,7 +93,7 @@ export default class TableComponent extends React.Component{
 
               <TableRow
                 key={row.date}
-                sx={{ '&:first-child th': { color:'#3874CB', border: 0 } }}
+                sx={{  }}
               >
                 <TableCell component="th" scope="row">
                   <h3 style={{color:'#3874CB'}}>{row.date}</h3>

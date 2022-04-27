@@ -32,7 +32,7 @@ export default class ChartComponent extends React.Component{
     render(){
         return (
             <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <BarChart width={500} height={300} data={this.state.data} barGap={-44} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+            <BarChart width={520} height={300} data={this.state.data} barGap={-44} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
                 
                 <CartesianGrid />
                 <Legend/>
