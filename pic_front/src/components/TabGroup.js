@@ -1,14 +1,26 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Box from '@mui/material/Box';
 
-export default function BasicButtonGroup() {
+export default function TabGroup() {
   return (
-    <ButtonGroup variant="contained" aria-label="outlined primary button group">
-      <Button>Last 3 days</Button>
-      <Button>Last weeks</Button>
-      <Button>Last 2 weeks</Button>
-      <Button>Last month</Button>
-    </ButtonGroup>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        '& > *': {
+          m: 1,
+        },
+      }}
+    >
+      <ButtonGroup variant="outlined" aria-label="outlined button group">
+        <Button>Last week</Button>
+        <Button>Last 2 weeks</Button>
+        <Button>Last month</Button>
+      </ButtonGroup>
+
+    </Box>
   );
 }

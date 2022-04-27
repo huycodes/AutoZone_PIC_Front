@@ -17,15 +17,11 @@ export default function OverviewGroup() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth='xl'>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '55vh' }}>
-        <div><h1><font color="black">Weekly Overview</font></h1></div>
-    
-    {/* <div><ChartComponent type='pies'/></div>
-    <div><ChartComponent type='aces'/></div> */}
-    
+      <Container maxWidth='xxl'>
+        <Box sx={{ bgcolor: '#3874CB', height: '54vh' }}>
+        <div><h2><font color="white">Weekly Overview</font></h2></div>
     <p><div><ChartStack/></div></p>
-    
+   
 
         </Box>
         

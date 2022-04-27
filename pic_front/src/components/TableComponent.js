@@ -8,15 +8,10 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import ProductService from '../Services/ProductService';
 import CatalogService from '../Services/CatalogService';
-import ChartStack from './ChartStack';
-
-
 
 
 export default class TableComponent extends React.Component{
   
-
-
   state = { rows: [], days: 0, prod: 0, notes: 0, apps: 0, cumProd: 0, cumNotes: 0, cumApps: 0}
   
   async getData(){
@@ -71,8 +66,6 @@ export default class TableComponent extends React.Component{
     this.getData()
   }
 
-  
-
   render(){
     // forceUpdate()
 
@@ -83,7 +76,7 @@ export default class TableComponent extends React.Component{
           <TableHead>
             <TableRow>
             
-              <TableCell align="left"><h3>Date</h3></TableCell>
+              <TableCell align="left" color="red"><h3>Date</h3></TableCell>
               <TableCell align="left"><h3>Total Products</h3></TableCell>
               <TableCell align="left"><h3>Loaded Products</h3></TableCell>
               <TableCell align="left"><h3>Total Notes</h3></TableCell>

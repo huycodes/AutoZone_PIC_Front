@@ -43,11 +43,11 @@ export default class CatalogApplicationChart extends React.Component{
     render(){
         return (
             <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <BarChart width={420} height={300} data={this.state.data} >
+            <BarChart width={500} height={300} data={this.state.data} >
                 <CartesianGrid />
                 <XAxis dataKey="date" />
                 <YAxis />
-                <Bar dataKey="x" stackId="a" fill="#4169E1" />
+                <Bar dataKey="x" stackId="a" fill="#3874CB" />
                 <Bar dataKey="y" stackId="a" fill="#A7C7E7" />
             </BarChart>
             </div>
