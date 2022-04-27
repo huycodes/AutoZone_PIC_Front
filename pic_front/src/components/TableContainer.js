@@ -10,7 +10,7 @@ export default function TableContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="1000vh" centered>
-        <Box sx={{  height: '100vh' }}>
+        <Box sx={{  color:"blue" }}>
         <TableComponent/>
         </Box>
         
