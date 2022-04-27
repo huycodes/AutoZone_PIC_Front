@@ -33,7 +33,7 @@ export default class TableComponent extends React.Component{
     })
 
     tempRows.push({date: '__CUMULATIVE__', totalProds:0, loadedProds: this.state.cumProd, totalNotes: 0, loadedNotes: this.state.cumNotes, totalApps: 0, loadedApps: this.state.cumApps})
-    for (var i = 80; i < 87; ++i){
+    for (var i = 80; i < 110; ++i){
       await ProductService.getLoadedOn(i).then((response) => {
         this.setState({prod: response.data})
       })
@@ -72,7 +72,7 @@ export default class TableComponent extends React.Component{
     return (
       
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 250 }} aria-label="simple table">
+        <Table sx={{ minWidth: 250 }} aria-label="simple table" stickyHeader size='small'>
           <TableHead>
             <TableRow>
             
@@ -97,22 +97,22 @@ export default class TableComponent extends React.Component{
                   <h3>{row.date}</h3>
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalProds}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalProds}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalProds}</h2></div></TableCell>}
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedProds}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedProds}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedProds}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalNotes}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalNotes}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedNotes}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedNotes}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedNotes}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalApps}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalApps}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalApps}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedApps}</h2></div></TableCell>
+                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedApps}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedApps}</h2></div></TableCell>}
               </TableRow>
             ))}
