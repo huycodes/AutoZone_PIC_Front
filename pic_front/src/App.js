@@ -12,6 +12,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import OverviewGroup from './components/OverviewGroup';
+import CustomDivider from './components/Divider';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
 
     <OverviewGroup />
     <p></p>
+    <CustomDivider/>
     <TabGroup/>
 
 <p><div><TableContainer/></div></p>

@@ -72,17 +72,18 @@ export default class TableComponent extends React.Component{
     return (
       
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 250 }} aria-label="simple table" stickyHeader size='small'>
+        <Table sx={{ minWidth: 150 }} aria-label="simple table" stickyHeader size='small'>
           <TableHead>
-            <TableRow>
+            <TableRow 
+                sx={{ '&:first-child th': { color:'#3874CB', border: 0 } }}>
             
               <TableCell align="left" ><h3 style={{color:'#3874CB'}}>Date</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Products</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Products</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Notes</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Notes</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Total Applications</h3></TableCell>
-              <TableCell align="left"><h3 style={{color:'#3874CB'}}>Loaded Applications</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Total Products</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Loaded Products</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Total Notes</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Loaded Notes</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Total Applications</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#3874CB'}}>Loaded Applications</h3></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -91,29 +92,29 @@ export default class TableComponent extends React.Component{
 
               <TableRow
                 key={row.date}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{ '&:first-child th': { color:'#3874CB', border: 0 } }}
               >
                 <TableCell component="th" scope="row">
                   <h3 style={{color:'#3874CB'}}>{row.date}</h3>
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalProds}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalProds}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.totalProds}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.totalProds}</h2></div></TableCell>}
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedProds}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedProds}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedProds}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.loadedProds}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalNotes}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.totalNotes}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedNotes}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedNotes}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedNotes}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.loadedNotes}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.totalApps}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalApps}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.totalApps}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.totalApps}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedApps}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedApps}</h2></div></TableCell>}
+                <TableCell align="center" ><div style={{color:'#A7C7E7'}}><h2>{row.loadedApps}</h2></div></TableCell>
+                : <TableCell align="center" ><div style={{color:'red'}}><h2>{row.loadedApps}</h2></div></TableCell>}
               </TableRow>
             ))}
           </TableBody>
