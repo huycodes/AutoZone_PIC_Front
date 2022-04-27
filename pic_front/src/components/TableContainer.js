@@ -6,15 +6,20 @@ import TableComponent from './TableComponent';
 
 export default function TableContainer() {
   return (
+    
     <div>
     <React.Fragment>
+      
       <CssBaseline />
+      
       <Container maxWidth="1000vh" centered>
-        <Box sx={{  color:"blue" }}>
+      <br></br> <br></br>
+        <Box sx={{  color:"blue" }} >
         <TableComponent/>
         </Box>
         
       </Container>
+      
     </React.Fragment>
     </div>
   );

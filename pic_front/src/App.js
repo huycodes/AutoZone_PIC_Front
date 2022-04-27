@@ -12,20 +12,21 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import OverviewGroup from './components/OverviewGroup';
-import CustomDivider from './components/Divider';
+import ButtonGroupWithDivider from './components/Divider';
+
 
 function App() {
   document.body.style='background:#FFF3E0'  
  
   return (
     <div className="App" >
-      <ResponsiveAppBar sx={{ bgcolor: "red" }}/>
+      <ResponsiveAppBar />
     
 
     <OverviewGroup />
     <p></p>
 
-    <TabGroup/>
+    <ButtonGroupWithDivider/>
 
 <p><div><TableContainer/></div></p>
 

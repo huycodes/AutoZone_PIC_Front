@@ -72,18 +72,18 @@ export default class TableComponent extends React.Component{
 
     return (
       
-      <TableContainer component={Paper} >
-        <Table sx={{ minWidth: 150 }} aria-label="simple table" stickyHeader size='small'>
+      <TableContainer component={Paper}  >
+        <Table sx={{ minWidth: 150 }} aria-label="simple table" stickyHeader size='small' >
           <TableHead>
             <TableRow 
                 sx={{ }}>
             
               <TableCell align="left" ><h3 style={{color:'#F37F00'}}></h3></TableCell>
-              <TableCell align="center"><h3 style={{color:'#F37F00'}}>Total Products</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#F37F00'}}>MDM Total Products</h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#F37F00'}}>Loaded Products</h3></TableCell>
-              <TableCell align="center"><h3 style={{color:'#F37F00'}}>Total Notes</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#F37F00'}}>MDM Total Notes</h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#F37F00'}}>Loaded Notes</h3></TableCell>
-              <TableCell align="center"><h3 style={{color:'#F37F00'}}>Total Applications</h3></TableCell>
+              <TableCell align="center"><h3 style={{color:'#F37F00'}}>MDM Total Applications</h3></TableCell>
               <TableCell align="center"><h3 style={{color:'#F37F00'}}>Loaded Applications</h3></TableCell>
             </TableRow>
           </TableHead>

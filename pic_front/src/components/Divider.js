@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
-
+import TabGroup from './TabGroup';
 const Root = styled('div')(({ theme }) => ({
   width: '100%',
   height: 20,
@@ -12,7 +12,7 @@ const Root = styled('div')(({ theme }) => ({
   },
 }));
 
-export default function CustomDivider() {
+export default function ButtonGroupWithDivider() {
   const content = (
     <div>
   
@@ -22,7 +22,7 @@ export default function CustomDivider() {
   return (
     <Root>
       {content}
-      <Divider></Divider>
+      <p><Divider><TabGroup/></Divider></p>
       {/* {content}
       <Divider textAlign="left">LEFT</Divider>
       {content}
@@ -32,8 +32,7 @@ export default function CustomDivider() {
         <Chip label="CHIP" />
       </Divider>
       {content} */}
-      <p></p>
-      <p></p>
+
     </Root>
   );
 }
