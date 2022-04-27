@@ -19,7 +19,7 @@ export default function OverviewGroup() {
       <CssBaseline />
       <Container maxWidth='xxl'>
         <Box sx={{ marginTop:3, bgcolor: '#D62C27', height: 410, Opacity:1, border:0, borderColor:'#3874CB', borderRadius:1.8 }}>
-        <div><h3><font color="white">Weekly Overview</font></h3></div>
+        <div><h3><font color="white">.:: Weekly Overview ::.</font></h3></div>
         <div><ChartStack/></div>
     {/* 3874CB 
     3487df*/}

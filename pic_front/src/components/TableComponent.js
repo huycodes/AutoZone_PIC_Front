@@ -100,19 +100,19 @@ export default class TableComponent extends React.Component{
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalProds}</h2></div></TableCell>
-                : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.totalProds}</h2></div></TableCell>}
+                : <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalProds}</h2></div></TableCell>}
                 {row.totalProds == row.loadedProds ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.loadedProds}</h2></div></TableCell>
                 : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.loadedProds}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalNotes}</h2></div></TableCell>
-                : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.totalNotes}</h2></div></TableCell>}
+                : <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.loadedNotes}</h2></div></TableCell>
                 : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.loadedNotes}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalApps}</h2></div></TableCell>
-                : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.totalApps}</h2></div></TableCell>}
+                : <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.totalApps}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
                 <TableCell align="center" ><div style={{color:'#FFCC80'}}><h2>{row.loadedApps}</h2></div></TableCell>
                 : <TableCell align="center" ><div style={{color:'#D62C27'}}><h2>{row.loadedApps}</h2></div></TableCell>}
