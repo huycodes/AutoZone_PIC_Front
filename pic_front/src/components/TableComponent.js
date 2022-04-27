@@ -33,7 +33,7 @@ export default class TableComponent extends React.Component{
     })
 
     tempRows.push({date: '__CUMULATIVE__', totalProds:0, loadedProds: this.state.cumProd, totalNotes: 0, loadedNotes: this.state.cumNotes, totalApps: 0, loadedApps: this.state.cumApps})
-    for (var i = 80; i < 110; ++i){
+    for (var i = 80; i < 87; ++i){
       await ProductService.getLoadedOn(i).then((response) => {
         this.setState({prod: response.data})
       })
