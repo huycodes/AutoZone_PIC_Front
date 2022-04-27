@@ -1,42 +1,14 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import TableComponent from './TableComponent';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
-// export default function TabGroup() {
-//   const [value, setValue] = React.useState(2);
-
-//   const handleChange = (event, newValue) => {
-//     setValue(newValue);
-//   };
-
-//   return (
-//     <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example" centered>
-//       <Tab label="Last 3 days" />
-//       <Tab label="Last week" />
-//       <Tab label="Last 2 weeks" />
-//       <Tab label="Last month" />
-//     </Tabs>
-//   );
-// }
-
-
-export default class TabGroup extends React.Component{
-  
-  state = {value: ''}
-
-  handleChange = (event, newValue) => {
-    
-  };
-
-  render() {
-    return (   <Tabs value={Tabs.label} onChange={this.handleChange} centered>
-    <Tab label="Last 3 days" />
-    <Tab label="Last week" />
-    <Tab label="Last 2 weeks" />
-    <Tab label="Last month" />
-  </Tabs>
+export default function BasicButtonGroup() {
+  return (
+    <ButtonGroup variant="contained" aria-label="outlined primary button group">
+      <Button>Last 3 days</Button>
+      <Button>Last weeks</Button>
+      <Button>Last 2 weeks</Button>
+      <Button>Last month</Button>
+    </ButtonGroup>
   );
-  }
- 
 }

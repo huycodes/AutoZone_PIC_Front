@@ -18,10 +18,11 @@ export default function ChartStack(props) {
   return (
     <div>
       <Stack direction="row" spacing={2} alignItems="center" justifyContent="center">
-       
+    
         <Item><div><ProductChart/><h3><font color="blue">Products</font></h3></div></Item>
         <Item><div><CatalogNoteChart/><h3><font color="blue">Catalog Notes</font></h3></div></Item>
         <Item><div><CatalogApplicationChart/><h3><font color="blue">Catalog Applications</font></h3></div></Item>
+
       </Stack>
 
     </div>

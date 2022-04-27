@@ -12,7 +12,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-
+import OverviewGroup from './components/OverviewGroup';
 
 function App() {
 
@@ -20,22 +20,14 @@ function App() {
   
   return (
     <div className="App">
-      
-    <ResponsiveAppBar/>
+      <ResponsiveAppBar/>
     
-    <div><h1><font color="black">Weekly Overview</font></h1></div>
-    
-    {/* <div><ChartComponent type='pies'/></div>
-    <div><ChartComponent type='aces'/></div> */}
-    
-    <p><div><ChartStack/></div></p>
-    
+
+    <OverviewGroup />
+    <p></p>
     <TabGroup/>
 
-    <p><div><TableContainer/></div></p>
-
-
-    
+<p><div><TableContainer/></div></p>
 
     
    

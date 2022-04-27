@@ -43,7 +43,7 @@ export default class CatalogNoteChart extends React.Component{
     render(){
         return (
             <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <BarChart width={460} height={300} data={this.state.data} >
+            <BarChart width={420} height={300} data={this.state.data} >
                 
                 <CartesianGrid />
                 <XAxis dataKey="date" />

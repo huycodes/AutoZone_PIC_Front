@@ -79,7 +79,7 @@ export default class TableComponent extends React.Component{
     return (
       
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 250 }} aria-label="simple table">
           <TableHead>
             <TableRow>
             
@@ -89,7 +89,7 @@ export default class TableComponent extends React.Component{
               <TableCell align="left"><h3>Total Notes</h3></TableCell>
               <TableCell align="left"><h3>Loaded Notes</h3></TableCell>
               <TableCell align="left"><h3>Total Applications</h3></TableCell>
-              <TableCell align="left"><h3>Loaded Application</h3></TableCell>
+              <TableCell align="left"><h3>Loaded Applications</h3></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -104,23 +104,23 @@ export default class TableComponent extends React.Component{
                   <h3>{row.date}</h3>
                 </TableCell>
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalProds}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalProds}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalProds}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalProds}</h2></div></TableCell>}
                 {row.totalProds == row.loadedProds ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedProds}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedProds}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedProds}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedProds}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalNotes}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalNotes}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalNotes}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedNotes}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedNotes}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalNotes}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.totalApps}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.totalApps}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalApps}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalApps}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
-                <TableCell align="left" ><div style={{color:'green'}}><h3>{row.loadedApps}</h3></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}>{row.loadedApps}</div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedApps}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedApps}</h2></div></TableCell>}
               </TableRow>
             ))}
           </TableBody>
