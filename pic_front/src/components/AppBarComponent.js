@@ -89,7 +89,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <h3>🚙...AutoZone</h3>
+            <h3>🚙...PIC/oversight</h3>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -147,7 +147,7 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 7, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 13, display: { xs: 'none', md: 'flex' } }}>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

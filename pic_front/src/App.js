@@ -15,9 +15,7 @@ import OverviewGroup from './components/OverviewGroup';
 import CustomDivider from './components/Divider';
 
 function App() {
-document.body.style='background:#eef5fc'
-
-  
+  document.body.style='background:#eef3fc'  
   return (
     <div className="App" >
       <ResponsiveAppBar/>
@@ -25,7 +23,7 @@ document.body.style='background:#eef5fc'
 
     <OverviewGroup />
     <p></p>
-    <CustomDivider/>
+
     <TabGroup/>
 
 <p><div><TableContainer/></div></p>
