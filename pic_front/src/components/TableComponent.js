@@ -106,8 +106,8 @@ export default class TableComponent extends React.Component{
                 <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalNotes}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
                 {row.totalNotes == row.loadedNotes ?
-                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalNotes}</h2></div></TableCell>
-                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalNotes}</h2></div></TableCell>}
+                <TableCell align="left" ><div style={{color:'green'}}><h2>{row.loadedNotes}</h2></div></TableCell>
+                : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.loadedNotes}</h2></div></TableCell>}
                 {row.totalApps == row.loadedApps ?
                 <TableCell align="left" ><div style={{color:'green'}}><h2>{row.totalApps}</h2></div></TableCell>
                 : <TableCell align="left" ><div style={{color:'red'}}><h2>{row.totalApps}</h2></div></TableCell>}
