@@ -17,11 +17,11 @@ export default function TabGroup() {
         },
       }}
     >
-      <ButtonGroup variant="contained" aria-label="outlined button group">
-        <Button>Last week</Button>
-        <Button>Last 2 weeks</Button>
-        <Button>Last month</Button>
-        <Button>Custom Range</Button>
+      <ButtonGroup variant="contained" aria-label="outlined button group"color="warning">
+        <Button color="warning">Last week</Button>
+        <Button color="warning">Last 2 weeks</Button>
+        <Button color="warning">Last month</Button>
+        <Button color="warning">Custom Range</Button>
         <ShareButton name="Export"/>
       </ButtonGroup>
 

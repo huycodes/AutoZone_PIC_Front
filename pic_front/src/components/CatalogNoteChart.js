@@ -17,7 +17,7 @@ export default class CatalogNoteChart extends React.Component{
         curDate = new Date(curDate.setDate(curDate.getDate()-i)).toLocaleDateString() ;
 
         tempRows.push({date: curDate,
-                        Total: notes+2,
+                        MDM: notes+2,
                         Loaded: notes});
     };
     this.setState({data: tempRows})
@@ -37,8 +37,8 @@ export default class CatalogNoteChart extends React.Component{
                 <Legend/>
                 <XAxis dataKey="date" />
                 <YAxis />
-                <Bar dataKey="Loaded" stackId="0"  fill="#3874CB" />
-                <Bar dataKey="Total" stackId="1" fill="#A7C7E7"  fillOpacity={0.6}/>
+                <Bar dataKey="Loaded" stackId="0"  fill="#F37F00" />
+                <Bar dataKey="MDM" stackId="1" fill="#D62C27"  fillOpacity={0.2}/>
             </BarChart>
             </div>
         );

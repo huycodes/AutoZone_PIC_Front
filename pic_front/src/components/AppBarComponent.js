@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-
+import Logo from "../az.png";
 const pages = ['Main', 'Query', 'Report'];
 const settings = ['Profile', 'Account', 'Settings', 'Logout'];
 
@@ -80,17 +80,18 @@ const ResponsiveAppBar = () => {
   }));
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: "#F57C00" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            <h3>🚙...PIC/oversight</h3>
-          </Typography>
+        <Box
+            component="img"
+            sx={{
+            height: 32,
+            }}
+            alt="Your logo."
+            src={Logo}
+        />
+  
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -147,7 +148,7 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 13, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow:0.01, display: { xs: 'none', md: 'flex' } }}>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -162,7 +163,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Robert Champness" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Robert Champness" src="../bob.jpeg" />
               </IconButton>
             </Tooltip>
             <Menu

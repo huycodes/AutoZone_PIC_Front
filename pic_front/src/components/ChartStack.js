@@ -19,9 +19,9 @@ export default function ChartStack(props) {
     <div>
       <Stack marginTop={-2} direction="row" spacing={0.75} alignItems="center" justifyContent="center">
     
-        <Item><div><ProductChart/><h3><font color="3874CB">Products</font></h3></div></Item>
-        <Item><div><CatalogNoteChart/><h3><font color="3874CB">Catalog Notes</font></h3></div></Item>
-        <Item><div><CatalogApplicationChart/><h3><font color="3874CB">Catalog Applications</font></h3></div></Item>
+        <Item><div><ProductChart/><h3><font color="black">Products</font></h3></div></Item>
+        <Item><div><CatalogNoteChart/><h3><font color="black">Catalog Notes</font></h3></div></Item>
+        <Item><div><CatalogApplicationChart/><h3><font color="black">Catalog Applications</font></h3></div></Item>
 
       </Stack>
 
