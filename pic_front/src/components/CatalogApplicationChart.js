@@ -22,7 +22,7 @@ export default class CatalogApplicationChart extends React.Component{
             if (i == 0) curDate = "Today"
 
             tempRows.push({date: curDate,
-                            MDM: apps+1,
+                            MDM: apps+12,
                             Loaded: apps+1});
     };
     this.setState({data: tempRows})
@@ -41,8 +41,8 @@ export default class CatalogApplicationChart extends React.Component{
                 <Legend/>
                 <XAxis dataKey="date" />
                 <YAxis />
-                <Bar dataKey="Loaded" stackId="0"  fill="#F37F00" />
-                <Bar dataKey="MDM" stackId="1" fill="#D62C27"  fillOpacity={0.2}/>
+                <Bar dataKey="Loaded" stackId="0"  fill="#D62C27" />
+                <Bar dataKey="MDM" stackId="1" fill="#F37F00"  fillOpacity={0.2}/>
             </BarChart>
             </div>
         );
