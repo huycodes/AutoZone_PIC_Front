@@ -21,17 +21,10 @@ function App() {
   return (
     <div className="App" >
       <ResponsiveAppBar />
-    
-
     <OverviewGroup />
     <p></p>
-
     <ButtonGroupWithDivider/>
-
-<p><div><TableContainer/></div></p>
-
-
-    
+    <p><div><TableContainer/></div></p>
     </div>
   );
 }
